@@ -46,9 +46,8 @@
           "required": true,
           "code": "Prsp",
           "choices": {
-            "R1": "Source",
-            "R2": "Middle",
-            "R3": "Amp"
+            "OZ": "Observation Zone",
+            "NZ": "Net Zone"
           },
           "defaultValue": ""
         },
@@ -65,46 +64,54 @@
       "name": "Autonomous",
       "fields": [
         {
-          "title": "Moved?",
+          "title": "Parked",
           "type": "boolean",
           "defaultValue": false,
           "required": false,
-          "code": "Mved"
+          "code": "Parked"
         },
         {
-          "code": "ausc",
-          "title": "Speaker Scored",
+          "code": "Auton_Net",
+          "title": "Net Zone",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "required": false
         },
         {
-          "code": "auskpm",
-          "title": "Speaker Missed",
+          "code": "Auton_LowB",
+          "title": "Low Basket",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },       
+        {
+          "code": "Auton_HighB",
+          "title": "High Basket",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "required": false
         },
         {
-          "code": "a_gp_Path",
-          "title": "Auto Game Piece Path",
-          "type": "select",
-          "multiSelect": true,
-          "choices": {
-            "1": "Speaker 3 (Source Side)",
-            "2": "Speaker 2 (Middle)",
-            "3": "Speaker 1 (Amp Side)",
-            "4": "Midline 5 (Source Edge)",
-            "5": "Midline 4",
-            "6": "Midline 3 (Middle)",
-            "7": "Midline 2",
-            "8": "Midline 1 (Amp Edge)"
-          }
+          "code": "Auton_LowC",
+          "title": "Low Chamber",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
         },
         {
-          "code": "auf",
+          "code": "Auton_HighC",
+          "title": "High Chamber",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },        
+        {
+          "code": "Auton_Foul",
           "title": "Auto Foul",
           "type": "counter",
           "defaultValue": 0,
@@ -116,40 +123,48 @@
     {
       "name": "Teleop",
       "fields": [
-        {
-          "code": "tamps",
-          "title": "Amp Scored",
+                {
+          "code": "Tele_Net",
+          "title": "Net Zone",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "required": false
         },
         {
-          "code": "tsc",
-          "title": "Speaker Scored",
+          "code": "Tele_LowB",
+          "title": "Low Basket",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "required": false
+        },       
+        {
+          "code": "Tele_HighB",
+          "title": "High Basket",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "required": false
         },
         {
-          "code": "tfs",
-          "title": "Feeder Shots",
+          "code": "Tele_LowC",
+          "title": "Low Chamber",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "required": false
         },
         {
-          "code": "cn",
-          "title": "Note in Trap?",
+          "code": "Tele_HighC",
+          "title": "High Chamber",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "required": false
-        },
+        },    
         {
-          "code": "Fou/Tech",
+          "code": "Tele_Foul",
           "title": "Teleop Foul",
           "type": "counter",
           "defaultValue": 0,
@@ -164,13 +179,12 @@
           "title": "End Position",
           "type": "select",
           "required": true,
-          "code": "epo",
+          "code": "End_Pos",
           "choices": {
-            "No": "No Climb",
+            "No": "No Where",
             "P": "Parked",
-            "Os": "Onstage",
-            "Hm": "Harmony",
-            "Fh": "Failed Harmony"
+            "LC": "Low Chamber",
+            "HC": "High Chamber"
           },
           "defaultValue": "No"
         }
@@ -180,7 +194,7 @@
       "name": "Postmatch",
       "fields": [
         {
-          "code": "or",
+          "code": "Off_Skill",
           "title": "Offense Skill",
           "type": "select",
           "choices": {
@@ -193,7 +207,7 @@
           "required": false
         },
         {
-          "code": "dr",
+          "code": "Def_Skill",
           "title": "Defense Skill",
           "type": "select",
           "choices": {
