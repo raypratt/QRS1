@@ -14,6 +14,17 @@
           "code": "scouter"
         },
         {
+          "title": "Competition",
+          "type": "select",
+          "required": true,
+          "code": "competition",
+          "choices": {
+          "USMISCM5" : "South Central League Meet 6",
+          "Test" : "Test"
+        },
+          "defaultValue": "USMISCM5"
+        },
+        {
           "title": "Match Number",
           "type": "number",
           "required": true,
@@ -36,9 +47,28 @@
         },
         {
           "title": "Team Number",
-          "type": "number",
+          "type": "select",
           "required": true,
-          "code": "teamNumber"
+          "code": "teamNumber",
+          "choices":{
+            "6811": "6811 Hardcore Hard Drives",
+            "7360": "7360 Gears and Spears",
+            "8142": "8142 Jr Mountie Megabots (Red)",
+            "8511": "8511 Greenhills Lawnmowers I",
+            "8656": "8656 The Kraken",
+            "9485": "9485 American Jackets",
+            "9895": "9895 Greenhills Lawnmowers II",
+            "10552": "10552 Mechanic Wasps",
+            "10735": "10735 JaXon Falcon Works - Gold",
+            "13748": "13748 The Silver Sprockets",
+            "14018": "14018 Jr Mountie Megabots (Black)",
+            "19770": "19770 JaXon Falcon Works - Maroon",
+            "19925": "19925 Techno Titans",
+            "26266": "26266 The Greenhills Lawnmowers III",
+            "27155": "27155 Warrior Bots",
+            "27277": "27277 Jr. Mountie Megabots (White)"
+          },
+          "defaultValue" : "10735"
         },
         {
           "title": "Starting Position",
@@ -181,10 +211,10 @@
           "required": true,
           "code": "End_Pos",
           "choices": {
-            "No": "No Where",
-            "P": "Parked",
-            "LC": "Low Chamber",
-            "HC": "High Chamber"
+            "0": "No Where",
+            "3": "Parked",
+            "15": "Low Chamber",
+            "30": "High Chamber"
           },
           "defaultValue": "No"
         }
